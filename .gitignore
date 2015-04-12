@@ -1,0 +1,6 @@
+# I want to ignore all the not-needed latex stuff
+*.aux  
+*.log
+*.out
+*.pdf
+*.tex~
