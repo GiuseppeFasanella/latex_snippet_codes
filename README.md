@@ -9,7 +9,7 @@ cd /afs/cern.ch/user/g/gfasanel/CERN_documents/svnrepo/
 
 svn update notes/AN-15-015
 
-eval `./notes/tdr runtime -sh`
+eval \`./notes/tdr runtime -sh\`
 
 cd notes/AN-15-015/trunk
 
