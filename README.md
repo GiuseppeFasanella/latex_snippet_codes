@@ -1,7 +1,7 @@
 # latex_snippet_codes
 The logical blocks in Latex I use most of the time
 
-C'e' un sito internet di Kyle Cranmer per scrivere le equazioni in latex e generare un immagine di cui fare copia e incolla al volo in slides, mail ecc..
+C'e' un sito internet di Kyle Cranmer per scrivere le equazioni in latex e generare un' immagine di cui fare copia e incolla al volo in slides, mail ecc..
 
 [unicodeit.net] (http://www.unicodeit.net/)
 
