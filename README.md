@@ -17,6 +17,8 @@ tdr --style=an b AN-15-015
 
 cp ../../tmp/AN-15-015_temp.pdf ~/scratch1/www/
 
+Ti coviene anche mettere le ultime 2 istruzioni di compilazione in uno script `source compiler.sh`
+
 Aprire un terminale locale e **montare la cartella delle immagini in locale**
 
 sshfs gfasanel@lxplus.cern.ch:/afs/cern.ch/user/g/gfasanel/CERN_documents/svnrepo/notes/AN-15-015/trunk/figures Scrivania/remote_dir_AN
