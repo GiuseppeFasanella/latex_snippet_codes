@@ -6,14 +6,20 @@ C'e' un sito internet di Kyle Cranmer per scrivere le equazioni in latex e gener
 [unicodeit.net] (http://www.unicodeit.net/)
 
 **Le figure** sono oggetti flottanti, vale a dire che e' Latex che decide dove inserirle al megliio, anche se tu fai di tutto per fargliele inserire dove dici tu.
-Pero', se non ti interessa la caption, come e' spesso il mio caso, ti basta usare \includegraphics
+Pero', se non ti interessa la caption, come e' spesso il mio caso, ti basta usare solo `\includegraphics`. Questo e' veramente l'unico modo in cui lo obblighi a piazzare l'immagine dove vuoi tu.
 
 %\begin{figure}[H]
+
 \begin{center}
+
 \includegraphics[width=0.7\textwidth]{figures/imm.jpg}
+
 \end{center}
+
 %\caption{}
+
 %\label{label}
+
 %\end{figure}
 
 **Come scrivo una AN**
