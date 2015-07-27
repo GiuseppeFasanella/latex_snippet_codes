@@ -10,11 +10,11 @@ Pero', se non ti interessa la caption, come e' spesso il mio caso, ti basta usar
 
 %\begin{figure}[H]
 
-\begin{center}
+`\begin{center}`
 
-\includegraphics[width=0.7\textwidth]{figures/imm.jpg}
+`\includegraphics[width=0.7\textwidth]{figures/imm.jpg}`
 
-\end{center}
+`\end{center}`
 
 %\caption{}
 
