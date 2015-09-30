@@ -12,9 +12,11 @@ Pero', se non ti interessa la caption, come e' spesso il mio caso, ti basta usar
 
 `\includegraphics[width=0.7\textwidth]{figures/imm.jpg}`
 
+`\captionof{figure}{This is my caption \label{a_label}`
+
 `\end{center}`
 
-*Altro trucco* e' quello di usare le minipage, invece delle figure, perche' le minipage sono non-floattanti
+**Altro trucco** e' quello di usare le minipage, invece delle figure, perche' le minipage sono non-floattanti (credo equivalente al trucco di sopra)
 
 `\begin{minipage}{\linewidth}`
 
