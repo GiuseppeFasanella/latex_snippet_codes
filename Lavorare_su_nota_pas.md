@@ -1,9 +1,12 @@
-work_on_note AN-15-222
+da *Amerigo*
 
-source compiler_note_pas.sh AN-15-222 (puoi tabbare)
+`work_on_note AN-15-222`
 
-**La logia e' questa**
+`fai le modifiche che vuoi`
 
+`source compiler_note_pas.sh AN-15-222` (puoi tabbare)
+
+**La logia in dettaglio e' questa**
 
 ssh -Y -t gfasanel@lxplus.cern.ch 'source note_pas.sh AN-15-222; bash -l'
 
