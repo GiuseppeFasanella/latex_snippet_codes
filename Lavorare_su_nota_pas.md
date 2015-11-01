@@ -1,10 +1,11 @@
 da *Amerigo*
 
-`work_on_note AN-15-222`
-
-`fai le modifiche che vuoi`
-
-`source compiler_note_pas.sh AN-15-222` (puoi tabbare)
+```
+work_on_note AN-15-222
+#fai le modifiche che vuoi
+source compiler_note_pas.sh AN-15-222
+#(puoi tabbare e funziona anche se tabbando ti viene il puntino finale AN-15-222.)
+```
 
 **La logica in dettaglio e' questa**
 
