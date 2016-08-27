@@ -2,10 +2,8 @@ La bibliografia viene trattata come un db
 
 ### Per compilare:
 
-lateX test_biblio.tex
+pdflatex main.tex
 
-bibtex8 --wolfgang test_biblio
+bibtex8 --wolfgang main
 
-lateX test_biblio.tex
-
-pdflatex test_biblio.tex
+pdflatex main.tex
