@@ -1,0 +1,20 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{chronosys}
+\usepackage[paperwidth=34cm, paperheight=10cm]{geometry}%taille du document                                                                                    
+\definecolor{blue}{HTML}{84CECC}
+\definecolor{gr}{HTML}{375D81}
+%                                                                                                                                                              
+\begin{document}
+\thispagestyle{empty}
+
+%---------------------timeline----------------%                                                                                                                
+\startchronology[align=left, startyear=1725,stopyear=1870, height=0pt, startdate=false, stopdate=false, dateselevation=0pt, arrow=false, box=true]
+\chronograduation[event][dateselevation=0pt]{25}
+%---------------------periods----------------%                                                                                                                 
+\chronoperiode[textstyle=\colorbox{blue!50}, color=blue, bottomdepth=0pt, topheight=10pt, textdepth=-12pt, dateselevation=2pt, startdate=true, stopdate=true]{\
+1732}{1809}{Haydn}
+\chronoperiode[textstyle=\colorbox{gr!50}, color=gr, bottomdepth=25pt, topheight=35pt, textdepth=-12pt, dateselevation=2pt, startdate=true, stopdate=true]{175\
+6}{1791}{Mozart}
+\stopchronology
+\end{document}
