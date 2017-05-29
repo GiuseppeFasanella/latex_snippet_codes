@@ -14,3 +14,6 @@ s|è'|e''|g
 s|ì'|i''|g
 s|ò'|o''|g
 s|ù'|u''|g
+#Capita anche di dover corregere altro
+s|pò|po'|g
+s|dè|de'|g
