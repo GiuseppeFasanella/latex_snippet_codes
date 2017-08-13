@@ -2,12 +2,21 @@
 
 %1. All'inizio del documento
 \usepackage{index}
+%Per ogni indice che vuoi avere devi specificare
+%{nome} {estensione di prima compilazione} {estensione finale}
+%E' importante che ogni indice abbia una diversa estensione, sia di prima compilazione che finale
+%A parte il default non credo ci siano regole per le estensioni degli indici successivi al primo
+%Io mi sono inventato ndx -> nnd e tdx->tnd ma non credo esista una regola in merito
 \newindex{default}{idx}{ind}{Indice dei nomi}
-\newindex{luoghi}{idx}{ind}{Indice dei luoghi}
+\newindex{luoghi}{ndx}{nnd}{Indice dei luoghi}
+\newindex{fatti}{tdx}{tnd}{Indice dei fatti}
+
 
 %2. All'interno del documentoemas
 Pascal\index{Pascal, B.}
 Madagascar\index[luoghi]{Madagascar}
+Rivoluzione francese\index[fatti]{Rivoluzione francese}
+
 
 %3. Alla fine del documento
 \printindex %questo sarebbe il default
@@ -15,9 +24,9 @@ Madagascar\index[luoghi]{Madagascar}
 \end{document}
 
 %4. Alla compilazione
-pdflatex documento_breve
-makeindex documento_breve
-makeindex -o documento_breve.nnd -t documento_breve.ngl documento_breve.ndx
-makeindex -o documento_breve.tnd -t documento_breve.tgl documento_breve.tdx
-pdflatex documento_breve
+pdflatex documento_breve %avrai gli indici in estensione .idx, .ndx, .tdx (quelle che ho chiamato di prima compilazione)
+makeindex documento_breve %compila il primo indice (il default) da .idx a .ind (c'e' anche un log file .ilg)
+makeindex -o documento_breve.nnd -t documento_breve.nlg documento_breve.ndx %occupati ora del secondo
+makeindex -o documento_breve.tnd -t documento_breve.tlg documento_breve.tdx %e anche del terzo indice
+pdflatex documento_breve %ricompila tutto
 pdflatex documento_breve
