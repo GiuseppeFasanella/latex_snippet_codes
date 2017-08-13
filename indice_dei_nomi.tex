@@ -12,10 +12,11 @@ Madagascar\index[luoghi]{Madagascar}
 %3. Alla fine del documento
 \printindex %questo sarebbe il default
 \printindex[luoghi] %questo sarebbe l'indice dei  luoghi
+\end{document}
 
 %4. Alla compilazione
-latex file
-makeindex file
-makeindex -o file.nnd -t file.ngl file.ndx
-latex file
-latex file
+latex documento_breve
+makeindex documento_breve
+makeindex -o documento_breve.nnd -t documento_breve.ngl documento_breve.ndx
+latex documento_breve
+latex documento_breve
