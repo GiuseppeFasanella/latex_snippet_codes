@@ -1,0 +1,21 @@
+%Supponiamo vuoi fare un indice dei nomi e dei luoghi.
+
+%1. All'inizio del documento
+\usepackage{index}
+\newindex{default}{idx}{ind}{Indice dei nomi}
+\newindex{luoghi}{idx}{ind}{Indice dei luoghi}
+
+%2. All'interno del documentoemas
+Pascal\index{Pascal, B.}
+Madagascar\index[luoghi]{Madagascar}
+
+%3. Alla fine del documento
+\printindex %questo sarebbe il default
+\printindex[luoghi] %questo sarebbe l'indice dei  luoghi
+
+%4. Alla compilazione
+latex file
+makeindex file
+makeindex -o file.nnd -t file.ngl file.ndx
+latex file
+latex file
