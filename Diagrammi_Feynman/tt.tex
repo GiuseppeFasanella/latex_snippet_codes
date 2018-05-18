@@ -1,0 +1,29 @@
+
+
+\documentclass{article}
+\usepackage{feynmp}
+\usepackage{color}
+\pagestyle{empty} %Takes away pagenumbers etc.
+\begin{document}
+\unitlength = 1mm
+\begin{fmffile}{tt_diag} %Creating a diagram called tt_diag
+ \begin{fmfgraph*}(40,25) 
+  \fmfleft{i1,i2} \fmflabel{$g$}{i1} \fmflabel{$g$}{i2}
+  \fmfright{o1,o2,o3,o4,o5,o6} \fmflabel{$\bar{b}$}{o1}\fmflabel{$b$}{o6}\fmflabel{\color{red}$l^{-}$}{o2}\fmflabel{\color{red}$l^{+}$}{o4}
+  \fmflabel{$\bar{\nu}$}{o3}\fmflabel{$\nu$}{o5}
+  
+  \fmf{gluon}{i2,v1,i1}
+  \fmf{gluon}{v1,v2}
+ \fmf{plain}{o1,vtop,v2,vtop2,o6}
+ \fmfv{label=$\bar{t}$,lab.dist=0.05w,label.angle=180}{vtop}
+ \fmfv{label=$t$,lab.dist=0.05w,label.angle=180}{vtop2}
+ \fmffreeze
+  \fmf{plain}{vtop,vW}
+  \fmf{plain}{vtop2,vW2}
+  \fmfv{label=\small{$W^{-}$},lab.dist=.03w,label.angle=110}{vW} %L'unico modo per piazzare bene i label è ruotare e allontanare
+ \fmfv{label=\small{$W^{+}$},lab.dist=0.03w,label.angle=110}{vW2}
+  \fmf{plain}{o2,vW,o3}
+  \fmf{plain}{o4,vW2,o5}
+ \end{fmfgraph*}
+\end{fmffile}
+\end{document}

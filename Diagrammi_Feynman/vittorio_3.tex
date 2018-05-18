@@ -1,0 +1,32 @@
+\documentclass{article}
+\usepackage{feynmp}
+\pagestyle{empty} %Takes away pagenumbers etc.
+\begin{document}
+
+\unitlength = 1mm
+\begin{fmffile}{vittorio_3_diag} %Creating a diagram called "my_process_diag"
+\begin{fmfchar*}(40,25)%(x.y) sono la grandezza del diagramma
+%Particelle stato iniziale(i) e finale (o)
+\fmfleft{i1,i2} \fmflabel{$g$}{i1}\fmflabel{$g$}{i2}
+\fmfright{o1,o2} \fmflabel{$q$}{o1} \fmflabel{$\bar{q}$}{o2} 
+% ||^ particelle stato finale, con label. Potresti farlo anche al momento della costruzione delle linee, ma 
+% in questo modo i label sono molto meglio piazzati
+
+%comincia a chiudere le linee e costruire il diagramma
+\fmf{gluon}{i1,v1} %c'è un gluone che da i1 passa per il vertice v1 e va in i2 (quindi una forma a > nello stato iniziale
+\fmf{gluon}{i2,v2} %c'è un gluone che fa il propagatore tra i vertici v1 e v2
+\fmf{plain}{o1,v1,v2,o2}
+
+%\fmfdot{v1,v2}% questo decide quali vertici abbiamo un punto marcato
+\end{fmfchar*}
+\end{fmffile}
+
+
+
+
+
+
+
+
+
+\end{document}

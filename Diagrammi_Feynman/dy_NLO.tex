@@ -1,0 +1,25 @@
+
+
+\documentclass{article}
+\usepackage{feynmp}
+\pagestyle{empty} %Takes away pagenumbers etc.
+\begin{document}
+\unitlength = 1mm
+\begin{fmffile}{dy_NLO_diag} %Creating a diagram called "output"
+ \begin{fmfchar*}(40,25)
+  \fmfleft{em,ep} \fmflabel{$\bar{q}$}{ep} \fmflabel{$q$}{em}
+  \fmfright{mum,mup,g} \fmflabel{$e^-$}{mum} \fmflabel{$e^+$}{mup}\fmflabel{$g$}{g}
+  \fmfset{arrow_ang}{7} %il default è 15, ma la testa della freccia viene troppo grosso e non mi piace
+  
+  \fmf{fermion}{em,gammae}
+  \fmf{fermion}{gammae,gammax,ep}
+  \fmf{photon,label=$\gamma,,Z$}{gammae,gammamu}
+  \fmf{fermion}{mup,gammamu,mum}
+  \fmfdot{gammamu,gammae}
+  \fmffreeze
+  \fmf{gluon}{gammax,g}
+ \end{fmfchar*}
+\end{fmffile}
+\end{document}
+% \fmf{fermion}{em,gammax}
+ % \fmf{fermion}{gammax,gammae}

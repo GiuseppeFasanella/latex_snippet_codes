@@ -1,0 +1,37 @@
+\documentclass{article}
+\usepackage{feynmp}
+\pagestyle{empty} %Takes away pagenumbers etc.
+\begin{document}
+
+\unitlength = 1mm
+\begin{fmffile}{vittorio_2_diag} %Creating a diagram called "my_process_diag"
+\begin{fmfchar*}(40,25)%(x.y) sono la grandezza del diagramma
+%Particelle stato iniziale(i) e finale (o)
+\fmfleft{i1,i2} \fmflabel{$g$}{i1}\fmflabel{$q$}{i2}
+\fmfright{o1,o2} \fmflabel{$q$}{o1} \fmflabel{$g$}{o2} 
+% ||^ particelle stato finale, con label. Potresti farlo anche al momento della costruzione delle linee, ma 
+% in questo modo i label sono molto meglio piazzati
+
+%comincia a chiudere le linee e costruire il diagramma
+\fmf{gluon}{i1,v1} %c'è un gluone che da i1 passa per il vertice v1 e va in i2 (quindi una forma a > nello stato iniziale
+\fmf{plain}{i2,v2,v1} %c'è un gluone che fa il propagatore tra i vertici v1 e v2
+\fmf{gluon}{v2,o2}% il senso della freccia è dato dall'ordine dei vertici 
+%\fmf{plain}{vx,v2} %questa linea in più serve per fare più lunga la freccia e piazzare il label
+%n.b: destra e sinistra sono stabiliti rispetto al senso della freccia
+%\fmf{plain}{v2,vy} %questa linea in più serve per fare più lunga la freccia e piazzare il label
+%\fmf{fermion}{v2,o2} %% questo è il T$
+\fmf{plain}{v1,o1}
+
+%\fmfdot{v1,v2}% questo decide quali vertici abbiamo un punto marcato
+\end{fmfchar*}
+\end{fmffile}
+
+
+
+
+
+
+
+
+
+\end{document}

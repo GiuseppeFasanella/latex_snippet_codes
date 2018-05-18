@@ -1,0 +1,24 @@
+
+%% LA REGOLA CHE LUI USA PER NUMERARE E' METTERE I NUMERI PIU' BASSI SOTTO
+%PERCIO' LA PARTICELLA o1 sara' quella piu' in basso e salendo metterà o2, o3,o4.....
+\documentclass{article}
+\usepackage{feynmp}
+\usepackage{color}
+\pagestyle{empty} %Takes away pagenumbers etc.
+\begin{document}
+\unitlength = 1mm
+\begin{fmffile}{ww_diag} %Creating a diagram called "output"
+ \begin{fmfchar*}(40,25)
+  \fmfleft{em,ep} \fmflabel{$\bar{q}$}{ep} \fmflabel{$q$}{em}
+  \fmf{fermion}{em,gammae,ep}
+  \fmf{photon}{gammae,v1}%,label=$\gamma,,Z$
+  \fmf{plain,label=$W^-$,l.s=right}{v1,v2}
+  \fmf{plain,label=$W^+$,l.s=left}{v1,v3}
+  \fmf{plain}{o4,v3,o3}
+  \fmf{plain}{o2,v2,o1}
+  \fmfright{o1,o2,o3,o4} \fmflabel{$\nu$}{o1}\fmflabel{\color{red}$l^{-}$}{o2} \fmflabel{$\nu$}{o3}\fmflabel{\color{red}$l^{+}$}{o4}
+  \fmfdot{v1,gammae}
+ \end{fmfchar*}
+\end{fmffile}
+\end{document}
+%

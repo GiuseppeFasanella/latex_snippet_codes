@@ -1,0 +1,28 @@
+\documentclass{article}
+\usepackage{feynmp}
+\pagestyle{empty} %Takes away pagenumbers etc.
+\begin{document}
+
+\unitlength = 1mm
+\begin{fmffile}{top_diag} 
+\begin{fmfchar*}(40,25)
+\fmfleft{i1} \fmflabel{$t$}{i1}
+\fmfright{o1,o2,o3} \fmflabel{$b$}{o1} \fmflabel{$\nu$}{o2} \fmflabel{$l$}{o3}
+\fmf{plain}{i1,v1,o1} 
+\fmf{boson,label=$W$,label.side=left}{v1,v2} 
+\fmf{plain}{o3,v2,o2}
+
+
+%\fmfdot{v1,v2}% questo decide quali vertici abbiamo un punto marcato
+\end{fmfchar*}
+\end{fmffile}
+
+
+
+
+
+
+
+
+
+\end{document}

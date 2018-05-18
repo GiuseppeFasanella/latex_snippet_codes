@@ -1,0 +1,19 @@
+
+
+\documentclass{article}
+\usepackage{feynmp}
+\pagestyle{empty} %Takes away pagenumbers etc.
+\begin{document}
+\unitlength = 1mm
+\begin{fmffile}{prova_diag} %Creating a diagram called "output"
+ \begin{fmfchar*}(40,25)
+  \fmfleft{em,ep} \fmflabel{$\bar{q}$}{ep} \fmflabel{$q$}{em}
+  \fmf{fermion}{em,gammae,ep}
+  \fmf{photon,label=$\gamma,,Z,,Z^{'},,G$}{gammae,gammamu}
+  \fmf{fermion}{mup,gammamu,mum}
+  \fmfright{mum,mup} \fmflabel{$e^-$}{mum} \fmflabel{$e^+$}{mup}
+  \fmfdot{gammamu,gammae}
+ \end{fmfchar*}
+\end{fmffile}
+\end{document}
+%

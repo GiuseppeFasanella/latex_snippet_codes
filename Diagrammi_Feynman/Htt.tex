@@ -1,0 +1,33 @@
+\documentclass{article}
+\usepackage{feynmp}
+\pagestyle{empty} %Takes away pagenumbers etc.
+\begin{document}
+
+\unitlength = 1mm
+\begin{fmffile}{Htt_diag} %Creating a diagram called "my_process_diag"
+\begin{fmfchar*}(40,25)
+\fmfleft{i1} \fmflabel{$H$}{i1}
+\fmfright{o1,o2,o3,o4,o5,o6} \fmflabel{$l$}{o1} \fmflabel{$\nu$}{o2} \fmflabel{$\nu_{\tau}$}{o3} 
+ \fmflabel{$l$}{o4} \fmflabel{$\nu$}{o5} \fmflabel{$\nu_{\tau}$}{o6} 
+\fmf{dashes}{i1,v1}
+\fmf{plain,label=$\tau$,label.side=right}{v1,v2}
+\fmf{plain,label=$\tau$,label.side=left}{v1,v3} 
+\fmf{plain}{v2,o1}
+\fmf{plain}{v2,o2}
+\fmf{plain}{v2,o3}
+
+\fmf{plain}{v3,o4}
+\fmf{plain}{v3,o5}
+\fmf{plain}{v3,o6}
+\end{fmfchar*}
+\end{fmffile}
+
+
+
+
+
+
+
+
+
+\end{document}

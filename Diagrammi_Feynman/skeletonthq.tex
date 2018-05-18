@@ -1,0 +1,82 @@
+\documentclass{article}
+\usepackage{feynmp}
+\usepackage{color}
+\pagestyle{empty} %Takes away pagenumbers etc.
+\begin{document}
+
+\unitlength = 1mm
+\begin{fmffile}{skeletonthq_diag} 
+\begin{fmfgraph}(40,40)
+\fmfstraight
+\fmfleft{i1,i2}%i0,i1,i2,i3,i4 e funzionava
+\fmfright{o1,o2,o3,o4,o5}
+\fmf{fermion,tension=2.5}{i1,v1}
+\fmf{fermion,tension=1.5}{v1,vb}
+\fmf{fermion}{vb,o1}%con o1 funzionava
+\fmf{boson}{vb,o2}
+\fmf{fermion,tension=1.5}{i2,v2}%,tension=1.5
+\fmf{fermion,tension=1.5}{v2,vf}
+\fmf{fermion}{vf,o5}
+\fmf{phantom}{i1,i2}
+\fmffreeze
+%\fmf{boson,tension=1.5}{v1,v3}
+%\fmf{boson}{v3,v2}
+%\fmffreeze
+%\fmf{plain}{v3,vh}
+%\fmf{phantom,tension=1.1}{vh,vb}
+%\fmf{photon}{o4,vh,o3}
+%\fmf{phantom}{o3,vb}
+%\fmf{photon}{vh,o3}
+
+\end{fmfgraph}
+%\end{fmffile}
+
+%\begin{fmfchar*}(40,25)%(x.y) sono la grandezza del diagramma
+%\fmfleft{i1} \fmfright{o1,o2}
+%\fmf{photon}{i1,v4}
+%\fmf{quark}{o1,v1,v2,v3,v4,v5,v6,v7,o2}
+%\fmffreeze
+%\fmf{gluon}{v1,v7}
+%\fmf{gluon}{v2,v6}
+%\fmf{gluon}{v3,v5}
+
+
+%\fmf{plain,lab=$T$,lab.side=right}{v3,v2}
+%\fmf{plain,lab=$T$,lab.side=right}{v2,v4} 
+
+%infine piazzo le linee esterne
+%\fmf{plain}{p1,v3}
+%\fmfv{label=$t$,label.dist=0.02w,label.angle=-40}{v3} %
+%\fmf{dashes}{v3,pHiggs}
+%\fmf{dashes,label=\tiny$H$,label.side=left}{pHiggs,p2}%questo è Higgs
+
+%\fmf{plain}{v4,p3}% questo è il top
+%\fmfv{label=$t$,label.dist=0.02w,label.angle=40}{v4}
+%\fmf{dashes}{v4,pHiggs2}
+%\fmf{dashes,label=\tiny$H$,label.side=right}{pHiggs2,p4}% questo è l'Higgs
+
+
+%\fmf{photon}{o1,pphot}
+%\fmf{photon}{pphot,p4}%fotone
+%\fmf{photon}{p4,pphot2}
+%\fmf{photon}{pphot2,o2}%fotone
+
+%\fmf{plain}{p3,o3}%b
+%\fmf{plain}{p3,pw}%W
+%\fmfv{lab=\tiny$W$,lab.dist=0.01w,l.a=120}{pw}%sotto
+%\fmf{plain}{o5,pw,o4}%q,q
+
+%\fmf{plain}{p1,o6}
+%\fmf{plain}{p1,pw2}
+
+%\fmf{plain}{o8,pw2,o7}
+%\fmfv{lab=\tiny$W$,lab.dist=0.02w,l.a=180}{pw2} %sopra
+
+%\fmf{plain}{o10,p2,o9}
+
+
+
+%\end{fmfchar*}
+\end{fmffile}
+
+\end{document}

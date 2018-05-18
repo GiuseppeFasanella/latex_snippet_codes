@@ -1,0 +1,79 @@
+\documentclass{article}
+\usepackage{feynmp}
+\usepackage{color}
+\pagestyle{empty} %Takes away pagenumbers etc.
+\begin{document}
+
+\unitlength = 1mm
+\begin{fmffile}{thq_2_diag} 
+\begin{fmfchar*}(40,25)%(x.y) sono la grandezza del diagramma
+\fmfleft{i1,i2}\fmflabel{\tiny$b$}{i1}\fmflabel{\tiny$q$}{i2}
+\fmfright{o1,o2,o3,o4,o5}
+%\fmfright{o1,o2,o3,o4,o5} \fmflabel{\tiny$b$}{o1} \fmflabel{\tiny$W$}{o2}\fmflabel{\tiny$\gamma$}{o3}\fmflabel{\tiny$\gamma$}{o4}
+%\fmflabel{\tiny$q^{'}$}{o5}
+\unitlength = 1mm
+\fmfset{arrow_ang}{10} %il default dello spessore delle frecce è 15 ma è troppo grosso
+\fmfset{arrow_len}{7} %questo decide la lunghezza della testa della freccia
+
+%comincia a chiudere le linee e costruire il diagramma
+\fmf{fermion}{i2,v2,vr}
+\fmf{fermion}{i1,v1,vz}
+%\fmf{plain}{v1,vr,o1}
+%\fmf{fermion}{v1,v3}
+%\fmf{fermion}{v3,o1}
+\fmf{boson,label=\tiny$W$,label.side=right}{v1,v4,v2}
+\fmf{dashes,label=\tiny$H$,label.side=left}{v4,v5} %questo è l'Higgs
+%\fmf{dashes}{vx,v5}
+\fmf{photon}{o4,v5,o3}
+\fmf{boson}{o2,vz}
+\fmf{plain}{o1,vz}
+\fmf{plain}{vr,o5}
+%\fmf{photon}{v5,v6}
+%\fmf{photon}{v6,o3}%giusto per allungare un po' la gamba del fotone
+%\fmf{boson}{v3,o2}
+%\fmf{fermion}{v3,o1}
+%\fmf{fermion,label=\tiny$t$,label.side=right}{v1,v3}
+
+ 
+
+%\fmfdot{v5}% questo decide quali vertici abbiamo un punto marcato
+
+%\fmf{plain,lab=$T$,lab.side=right}{v3,v2}
+%\fmf{plain,lab=$T$,lab.side=right}{v2,v4} 
+
+%infine piazzo le linee esterne
+%\fmf{plain}{p1,v3}
+%\fmfv{label=$t$,label.dist=0.02w,label.angle=-40}{v3} %
+%\fmf{dashes}{v3,pHiggs}
+%\fmf{dashes,label=\tiny$H$,label.side=left}{pHiggs,p2}%questo è Higgs
+
+%\fmf{plain}{v4,p3}% questo è il top
+%\fmfv{label=$t$,label.dist=0.02w,label.angle=40}{v4}
+%\fmf{dashes}{v4,pHiggs2}
+%\fmf{dashes,label=\tiny$H$,label.side=right}{pHiggs2,p4}% questo è l'Higgs
+
+
+%\fmf{photon}{o1,pphot}
+%\fmf{photon}{pphot,p4}%fotone
+%\fmf{photon}{p4,pphot2}
+%\fmf{photon}{pphot2,o2}%fotone
+
+%\fmf{plain}{p3,o3}%b
+%\fmf{plain}{p3,pw}%W
+%\fmfv{lab=\tiny$W$,lab.dist=0.01w,l.a=120}{pw}%sotto
+%\fmf{plain}{o5,pw,o4}%q,q
+
+%\fmf{plain}{p1,o6}
+%\fmf{plain}{p1,pw2}
+
+%\fmf{plain}{o8,pw2,o7}
+%\fmfv{lab=\tiny$W$,lab.dist=0.02w,l.a=180}{pw2} %sopra
+
+%\fmf{plain}{o10,p2,o9}
+
+
+
+\end{fmfchar*}
+\end{fmffile}
+
+\end{document}
