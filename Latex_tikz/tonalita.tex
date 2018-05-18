@@ -1,0 +1,58 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+
+\begin{document}
+\begin{tikzpicture}
+
+% definizione delle caratteristiche del nodo
+\tikzset{mynode/.style={circle,draw, minimum width=0.1cm, minimum height=0.1cm}}
+% definizione colore di riempimento  
+\tikzset{myfillcolor/.style ={fill=#1, draw=none}}
+%Traccia gli archi
+\draw (-4,0) arc [start angle=180, end angle=-180, x radius=4, y radius=4];
+\draw (-8,0) arc [start angle=180, end angle=-180, x radius=8, y radius=8];
+
+%Disegna i nodi sugli archi
+\foreach \a in {1,2,...,12}{
+\node[mynode,myfillcolor=black] at (\a*360/12: 4 cm) {};
+\draw (\a*360/12: 4 cm)--(\a*360/12: 8 cm);
+}
+\foreach \a in {1,2,...,12}{
+\node[mynode,myfillcolor=black] at (\a*360/12: 8 cm) {};
+}
+
+
+%Nomi delle tonalita' maggiori
+\draw (3*360/12: 9 cm) node{Do +};
+\draw (2*360/12: 9 cm) node{Sol +};
+\draw (1*360/12: 9 cm) node{Re +};
+\draw (0*360/12: 9 cm) node{La +};
+\draw (-1*360/12: 9 cm) node{Mi +};
+\draw (-2*360/12: 9 cm) node{Si +};
+\draw (-3*360/12: 8.5 cm) node{Fa\# +};
+\draw (-3*360/12: 9 cm) node{(Solb +)};
+\draw (-4*360/12: 9 cm) node{Reb +};
+\draw (-5*360/12: 9 cm) node{Lab +};
+\draw (-6*360/12: 9 cm) node{Mib +};
+\draw (-7*360/12: 9 cm) node{Sib +};
+\draw (-8*360/12: 9 cm) node{Fa +};
+%Nomi delle tonalita' minori
+\draw (3*360/12: 3 cm) node{La -};
+\draw (2*360/12: 3 cm) node{Mi -};
+\draw (1*360/12: 3 cm) node{Si -};
+\draw (0*360/12: 3 cm) node{Fa\# -};
+\draw (-1*360/12: 3 cm) node{Do\# -};
+\draw (-2*360/12: 3 cm) node{Sol\# -};
+\draw (-3*360/12: 2.5 cm) node{Re\# -};
+\draw (-3*360/12: 3 cm) node{(Mib -)};
+\draw (-4*360/12: 3 cm) node{Sib -};
+\draw (-5*360/12: 3 cm) node{Fa -};
+\draw (-6*360/12: 3 cm) node{Do -};
+\draw (-7*360/12: 3 cm) node{Sol -};
+\draw (-8*360/12: 3 cm) node{Re -};
+
+
+
+\end{tikzpicture}
+\end{document}

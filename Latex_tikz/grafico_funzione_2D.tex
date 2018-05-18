@@ -1,0 +1,12 @@
+\documentclass{standalone}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.9}
+
+\begin{document}
+\begin{tikzpicture}
+\begin{axis}
+\addplot3 [surf, samples=50, domain=-2*pi:2*pi, colormap/cool]
+           {sin(deg(sqrt(x^2+y^2)))/sqrt(x^2+y^2)};
+\end{axis}
+\end{tikzpicture}
+\end{document}
