@@ -1,0 +1,13 @@
+The \rule command constructs a box, which is treated like a character and has the following syntax  \rule[h]{w}{t} where h w and t are lengths and represent respectively:
+
+the height above the baseline to which raise the box (defaults at 0)
+
+the width of the box
+
+the thickness of the rule
+
+In your case
+
+\par\noindent\rule{\textwidth}{0.4pt}
+should do the trick.
+
